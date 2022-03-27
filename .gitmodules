@@ -1,0 +1,45 @@
+[submodule "esp-idf"]
+	path = esp-idf
+	url = ../../0xFEEDC0DE64/esp-idf.git
+[submodule "components/ArduinoJson"]
+	path = components/ArduinoJson
+	url = ../../0xFEEDC0DE64/ArduinoJson.git
+[submodule "components/arduino-esp32"]
+	path = components/arduino-esp32
+	url = ../../0xFEEDC0DE64/arduino-esp32.git
+[submodule "components/cpputils"]
+	path = components/cpputils
+	url = ../../0xFEEDC0DE64/cpputils.git
+[submodule "components/cxx-ring-buffer"]
+	path = components/cxx-ring-buffer
+	url = ../../0xFEEDC0DE64/cxx-ring-buffer.git
+[submodule "components/date"]
+	path = components/date
+	url = ../../0xFEEDC0DE64/date.git
+[submodule "components/espasynchttpreq"]
+	path = components/espasynchttpreq
+	url = ../../0xFEEDC0DE64/espasynchttpreq.git
+[submodule "components/espasyncota"]
+	path = components/espasyncota
+	url = ../../0xFEEDC0DE64/espasyncota.git
+[submodule "components/espchrono"]
+	path = components/espchrono
+	url = ../../0xFEEDC0DE64/espchrono.git
+[submodule "components/espconfiglib"]
+	path = components/espconfiglib
+	url = ../../0xFEEDC0DE64/espconfiglib.git
+[submodule "components/espcpputils"]
+	path = components/espcpputils
+	url = ../../0xFEEDC0DE64/espcpputils.git
+[submodule "components/esphttpdutils"]
+	path = components/esphttpdutils
+	url = ../../0xFEEDC0DE64/esphttpdutils.git
+[submodule "components/espwifistack"]
+	path = components/espwifistack
+	url = ../../0xFEEDC0DE64/espwifistack.git
+[submodule "components/expected"]
+	path = components/expected
+	url = ../../0xFEEDC0DE64/expected.git
+[submodule "components/fmt"]
+	path = components/fmt
+	url = ../../0xFEEDC0DE64/fmt.git
