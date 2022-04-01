@@ -5,6 +5,7 @@ set(headers
     taskmanager.h
     webserver.h
     wifi.h
+    espnow.h
 )
 
 set(sources
@@ -15,6 +16,7 @@ set(sources
     taskmanager.cpp
     webserver.cpp
     wifi.cpp
+    espnow.cpp
 )
 
 set(dependencies
