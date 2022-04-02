@@ -4,6 +4,7 @@
 #include <esp_log.h>
 #include <espwifistack.h>
 #include <fmt/core.h>
+#include <driver/uart.h>
 
 // local includes
 #include "config.h"
@@ -58,6 +59,7 @@ esp_err_t _sendEspNowImpl(uint8_t *data, size_t size, const uint8_t *destination
             return ESP_OK;
         }
     }
+    return ESP_ERR_ESPNOW_NOT_FOUND;
 }
 
 extern "C" void _recvCb(const uint8_t *mac_addr, const uint8_t *data, int data_len)
@@ -65,7 +67,8 @@ extern "C" void _recvCb(const uint8_t *mac_addr, const uint8_t *data, int data_l
     const std::string_view data_str{(const char*) data, size_t(data_len)};
     char macStr[18] = {0};
     sprintf(macStr, "%02x:%02x:%02x:%02x:%02x:%02x", mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
-    ESP_LOGI(TAG, "[%s] --> %.*s", macStr, data_len, data_str.data());
+    const std::string out = fmt::format("\u001b[32m[{}] --> {}\u001b[0m\n", macStr, data_str);
+    uart_write_bytes(CONFIG_ESP_CONSOLE_UART_NUM, out.data(), out.size());
 }
 
 extern "C" void _sendCb(const uint8_t *mac_addr, esp_now_send_status_t status)

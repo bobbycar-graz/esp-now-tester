@@ -7,4 +7,5 @@ then
     return
 fi
 
+export PATH=$PATH:$FIRMWARE_ROOT/tools
 . ${FIRMWARE_ROOT}/esp-idf/export.sh
